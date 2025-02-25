@@ -7,7 +7,7 @@
 [![CI](https://github.com/veeso/strongify/actions/workflows/ci.yml/badge.svg)](https://github.com/veeso/strongify/actions/workflows/ci.yml)
 [![License-MIT](https://img.shields.io/badge/License-MIT-teal.svg)](https://opensource.org/licenses/MIT)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
-[![vscode install](https://img.shields.io/badge/VSCode-Install-blue.svg)](https://opensource.org/licenses/MIT)
+[![vscode install](https://img.shields.io/badge/VSCode-Install-blue.svg)](https://marketplace.visualstudio.com/items?itemName=veeso.strongify)
 
 ## Description
 
