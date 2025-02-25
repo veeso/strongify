@@ -1,71 +1,33 @@
-# strongify README
+# strongify
 
-This is the README for your extension "strongify". After writing up a brief description, we recommend including the following sections.
+<p align="center">
+  <img src="./assets/logo.png" alt="cren logo" width="256" />
+</p>
 
-## Features
+[![CI](https://github.com/veeso/strongify/actions/workflows/ci.yml/badge.svg)](https://github.com/veeso/strongify/actions/workflows/ci.yml)
+[![License-MIT](https://img.shields.io/badge/License-MIT-teal.svg)](https://opensource.org/licenses/MIT)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
+[![vscode install](https://img.shields.io/badge/VSCode-blue.svg)](https://opensource.org/licenses/MIT)
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+## Description
 
-For example if there is an image subfolder under your extension project workspace:
+Probably something like that already existed but I wanted to keep it simple.
 
-\!\[feature X\]\(images/feature-x.png\)
+When I work on HTML/JSX pages I hate to have to type <strong>...</strong> around my text to make it bold. I wanted to have a simple way to make text bold without having to type the tags.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+That's where strongify comes in.
 
-## Requirements
+Just select the text you want to wrap in the tags and press `Ctrl+Shift+P` and type `strongify` and press `Enter`.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+project's logo is *cringy* on purpose
 
-## Extension Settings
+## Commands
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+There are two commands available:
 
-For example:
+- `Strongify: strong` - Wraps the selected text in `<strong>...</strong>` tags.
+- `Strongify: italic` - Wraps the selected text in `<em>...</em>` tags.
 
-This extension contributes the following settings:
+## License
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+strongify is licensed under the MIT License. See [LICENSE](LICENSE) for more information.

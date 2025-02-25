@@ -1,26 +1,50 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 
-// This method is called when your extension is activated
-// Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
+  const strongifyDisposable = vscode.commands.registerCommand(
+    'strongify.strong',
+    strongify,
+  );
+  context.subscriptions.push(strongifyDisposable);
 
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "strongify" is now active!');
+  const italicizeDisposable = vscode.commands.registerCommand(
+    'strongify.italic',
+    italicize,
+  );
+  context.subscriptions.push(italicizeDisposable);
 
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with registerCommand
-	// The commandId parameter must match the command field in package.json
-	const disposable = vscode.commands.registerCommand('strongify.helloWorld', () => {
-		// The code you place here will be executed every time your command is executed
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from strongify!');
-	});
-
-	context.subscriptions.push(disposable);
+  console.log('Strongify extension is now active!');
 }
 
-// This method is called when your extension is deactivated
 export function deactivate() {}
+
+const strongify = () => {
+  return tagText('strong');
+};
+
+const italicize = () => {
+  return tagText('em');
+};
+
+const tagText = (tag: string) => {
+  const editor = vscode.window.activeTextEditor;
+  if (!editor) {
+    vscode.window.showErrorMessage('No active text editor found');
+    return;
+  }
+
+  // get selected text
+  const selection = editor.selection;
+  const selectedText = editor.document.getText(selection);
+
+  if (selectedText.length === 0) {
+    vscode.window.showErrorMessage('No text selected');
+    return;
+  }
+
+  const taggedText = `<${tag}>${selectedText}</${tag}>`;
+
+  editor.edit((editBuilder) => {
+    editBuilder.replace(selection, taggedText);
+  });
+};
